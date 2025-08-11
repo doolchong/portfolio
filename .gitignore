@@ -1,0 +1,51 @@
+# dependencies
+/node_modules
+
+# production build
+/dist
+/build
+
+# local env files
+.env
+.env.*.local
+
+# editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# macOS system files
+.DS_Store
+
+# npm/yarn logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# lock files (필요 시 유지)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional eslint / stylelint cache
+.eslintcache
+.stylelintcache
+
+# Storybook build outputs
+.out
+storybook-static
+
+# VSCode settings (optional)
+.vscode/*
+!.vscode/extensions.json
+
+# OS-specific files
+Thumbs.db
