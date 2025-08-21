@@ -8,6 +8,10 @@ export interface Project {
   bullets: string[];
   outcomes: string[];
   links: { repo?: string; post?: string };
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
+  extraImages?: { src: string; alt?: string; caption?: string }[];
 }
 
 export interface PostItem {

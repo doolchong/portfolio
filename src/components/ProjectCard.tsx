@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import type { Project } from "@/types";
 
 export default function ProjectCard({
@@ -14,32 +15,53 @@ export default function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.05 }}
-      className="group rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5 hover:bg-zinc-900"
+      className="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-900"
     >
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h3 className="text-lg font-semibold">{project.name}</h3>
-          <p className="text-sm text-zinc-400 mt-0.5">
-            {project.period} · {project.role}
-          </p>
+      {/* 이미지 */}
+      {project.image && (
+        <Link to={`/projects/${project.slug}`} className="block">
+          <div className="relative w-full aspect-[16/9] overflow-hidden">
+            <img
+              src={project.image}
+              alt={project.imageAlt ?? project.name}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            />
+          </div>
+        </Link>
+      )}
+
+      {/* 내용 */}
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <Link
+              to={`/projects/${project.slug}`}
+              className="block text-lg font-semibold leading-tight hover:underline"
+            >
+              {project.name}
+            </Link>
+            <p className="text-sm text-zinc-400 mt-1.5">
+              {project.period} · {project.role}
+            </p>
+          </div>
         </div>
-        <span className="text-xs text-zinc-400">{project.stack}</span>
-      </div>
 
-      <p className="mt-3 text-zinc-300">{project.summary}</p>
+        <p className="mt-3 text-zinc-300">{project.summary}</p>
 
-      <ul className="mt-3 space-y-1 text-sm list-disc list-inside text-zinc-300">
-        {project.bullets.map((b, i) => (
-          <li key={i}>{b}</li>
-        ))}
-      </ul>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {project.outcomes.map((o, i) => (
+            <span key={i} className="chip chip-soft">
+              {o}
+            </span>
+          ))}
+        </div>
 
-      <div className="mt-3 flex flex-wrap gap-2">
-        {project.outcomes.map((o, i) => (
-          <span key={i} className="chip chip-soft">
-            {o}
-          </span>
-        ))}
+        <div className="mt-4">
+          <Link to={`/projects/${project.slug}`} className="btn btn-ghost">
+            Read more →
+          </Link>
+        </div>
       </div>
     </motion.article>
   );

@@ -1,5 +1,5 @@
 {
-  "name": "3d-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15,6 +15,8 @@
     "framer-motion": "^12.23.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.8.0",
     "three": "^0.160.0"
   },
   "devDependencies": {
