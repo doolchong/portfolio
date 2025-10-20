@@ -38,14 +38,12 @@ export default function FitNusContent() {
           문화를 형성할 수 있도록 지원합니다.
         </p>
         <figure className="mt-6">
-          <img
+          <ImageZoom
             src="/images/fitnus.png"
-            alt="FitNus 예약·결제 앱 UI"
-            className="rounded-xl border border-zinc-800 cursor-pointer"
-            onClick={() => setZoomSrc("/images/fitnus.png")}
+            alt="FitNus 예약·결제 앱 예시화면"
           />
           <figcaption className="mt-2 text-sm text-zinc-400 text-center">
-            FitNus 예약·결제 UI
+            FitNus 예약·결제 예시화면
           </figcaption>
         </figure>
       </Section>
@@ -144,10 +142,9 @@ export default function FitNusContent() {
           </li>
         </ul>
         <div className="mt-4">
-          <img
+          <ImageZoom
             src="/images/fitnus-architecture.png"
             alt="FitNus AWS 기반 아키텍처 다이어그램"
-            className="rounded-lg border border-zinc-700 shadow-md"
           />
           <p className="mt-2 text-sm text-zinc-400">
             AWS 기반 FitNus 시스템 아키텍처 – ECS 클러스터, 오토스케일링,
@@ -410,11 +407,9 @@ export default function FitNusContent() {
               </p>
 
               <figure className="mt-4">
-                <img
+                <ImageZoom
                   src="/images/fitnus-monolith.png"
                   alt="모놀리식 단일 모듈 구조"
-                  className="rounded-lg border border-zinc-700 cursor-pointer"
-                  onClick={() => setZoomSrc("/images/fitnus-monolith.png")}
                 />
                 <figcaption className="mt-2 text-sm text-zinc-400 text-center">
                   모놀리식 구조 (단일 모듈)
@@ -428,13 +423,9 @@ export default function FitNusContent() {
               </p>
 
               <figure className="mt-4">
-                <img
+                <ImageZoom
                   src="/images/fitnus-monolith-scaleout.png"
                   alt="모놀리식 구조 Scale Out 문제"
-                  className="rounded-lg border border-zinc-700 cursor-pointer"
-                  onClick={() =>
-                    setZoomSrc("/images/fitnus-monolith-scaleout.png")
-                  }
                 />
                 <figcaption className="mt-2 text-sm text-zinc-400 text-center">
                   모놀리식 구조 Scale Out 예시 (불필요한 도메인까지 확장됨)
@@ -651,13 +642,9 @@ export default function FitNusContent() {
                 전략을 수립했습니다.
               </p>
               <figure className="mt-4">
-                <img
+                <ImageZoom
                   src="/images/fitnus-performance-batch.png"
                   alt="일 단위 센터 이용내역 기록 성능 비교"
-                  className="rounded-xl border border-zinc-800 cursor-pointer"
-                  onClick={() =>
-                    setZoomSrc("/images/fitnus-performance-batch.png")
-                  }
                 />
                 <figcaption className="mt-2 text-sm text-zinc-400 text-center">
                   배치 처리 성능 비교 – saveAll 적용 시{" "}
@@ -677,13 +664,9 @@ export default function FitNusContent() {
                 <strong>기본 Redis 대비 4.7배 성능 개선</strong>을 달성했습니다.
               </p>
               <figure className="mt-4">
-                <img
+                <ImageZoom
                   src="/images/fitnus-performance-concurrency.png"
                   alt="일정 등록 동시성 제어 성능 개선"
-                  className="rounded-xl border border-zinc-800 cursor-pointer"
-                  onClick={() =>
-                    setZoomSrc("/images/fitnus-performance-concurrency.png")
-                  }
                 />
                 <figcaption className="mt-2 text-sm text-zinc-400 text-center">
                   동시성 제어 성능 비교 – Lua Script 적용 시{" "}
