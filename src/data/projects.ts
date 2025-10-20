@@ -127,6 +127,17 @@ export const PROJECTS: Project[] = [
         alt: "모델 성능 측정 결과",
         caption: "YOLO 모델 성능 지표 (mAP ≈ 0.94)",
       },
+      {
+        src: withBase("/images/fæst-augmentation1.png"),
+        alt: "클래스 불균형 문제 해결 - AI 허브 증강",
+        caption:
+          "AI 허브 증강 데이터로 클래스 불균형 문제 일부 해소 (Flip, Hue 등)",
+      },
+      {
+        src: withBase("/images/fæst-augmentation2.png"),
+        alt: "클래스 불균형 문제 해결 - 추가 증강",
+        caption: "Brightness 조정 등 자체 추가 증강으로 소수 클래스 확대",
+      },
     ],
   },
 ];
