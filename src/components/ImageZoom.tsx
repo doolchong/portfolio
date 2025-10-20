@@ -7,7 +7,10 @@ export default function ImageZoom({ src, alt }: { src: string; alt?: string }) {
 
   const resolvedSrc = src.startsWith("http")
     ? src
-    : `${import.meta.env.BASE_URL}${src.replace(/^\/+/, "")}`;
+    : `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${src.replace(
+        /^\/+/,
+        ""
+      )}`;
 
   return (
     <>
