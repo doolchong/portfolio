@@ -77,11 +77,9 @@ export default function TrendChatContent() {
           커뮤니티 기능을 제공합니다.
         </p>
         <figure className="mt-6">
-          <img
+          <ImageZoom
             src="/images/trend-chat.png"
             alt="Trend-Chat 홈 화면과 실시간 채팅 UI"
-            className="rounded-xl border border-zinc-800 cursor-pointer"
-            onClick={() => setZoomSrc("/images/trend-chat.png")}
           />
           <figcaption className="mt-2 text-sm text-zinc-400 text-center">
             Trend-Chat: 트렌드 요약과 채팅 UI
