@@ -73,7 +73,7 @@ const AiPestDiagnosisContent = () => (
     <Section title="Troubleshooting: 클래스 불균형 문제 해결">
       <figure className="mt-6">
         <ImageZoom
-          src={withBase("/images/fæst-class-imbalance.png")}
+          src="/images/fæst-class-imbalance.png"
           alt="클래스 불균형 시각화"
         />
         <figcaption className="mt-2 text-sm text-zinc-400">
@@ -118,7 +118,7 @@ const AiPestDiagnosisContent = () => (
       <div className="space-y-8 mt-8">
         <figure>
           <ImageZoom
-            src={withBase("/images/fæst-augmentation1.png")}
+            src="/images/fæst-augmentation1.png"
             alt="클래스 불균형 문제 해결 - AI 허브 증강"
           />
           <figcaption className="mt-2 text-sm text-zinc-400">
@@ -128,7 +128,7 @@ const AiPestDiagnosisContent = () => (
 
         <figure>
           <ImageZoom
-            src={withBase("/images/fæst-augmentation2.png")}
+            src="/images/fæst-augmentation2.png"
             alt="클래스 불균형 문제 해결 - 추가 증강"
           />
           <figcaption className="mt-2 text-sm text-zinc-400">

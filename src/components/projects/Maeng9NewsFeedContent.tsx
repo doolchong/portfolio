@@ -2,6 +2,7 @@
 
 import Section from "@/components/Section";
 import { useState } from "react";
+import ImageZoom from "../ImageZoom";
 
 export default function Maeng9NewsFeedContent() {
   const [zoomSrc, setZoomSrc] = useState<string | null>(null);
@@ -13,10 +14,9 @@ export default function Maeng9NewsFeedContent() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 cursor-zoom-out"
           onClick={() => setZoomSrc(null)}
         >
-          <img
+          <ImageZoom
             src={zoomSrc}
             alt="확대된 이미지"
-            className="max-w-[90%] max-h-[90%] rounded-xl shadow-lg border border-white"
           />
         </div>
       )}
@@ -35,11 +35,9 @@ export default function Maeng9NewsFeedContent() {
           제공합니다.
         </p>
         <figure className="mt-6">
-          <img
+          <ImageZoom
             src="/images/maeng9-news-feed.png"
             alt="맹9 뉴스피드 – 친구 기반 피드와 오늘의 인기글 UI"
-            className="rounded-xl border border-zinc-800 cursor-pointer"
-            onClick={() => setZoomSrc("/images/maeng9-news-feed.png")}
           />
         </figure>
       </Section>

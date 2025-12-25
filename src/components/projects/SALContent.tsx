@@ -34,12 +34,7 @@ export default function SALContent() {
         </p>
 
         <figure className="mt-6">
-          <img
-            src="/images/sal.png"
-            alt="SAL 개요/칸반 보드 UI"
-            className="rounded-xl border border-zinc-800 cursor-pointer"
-            onClick={() => setZoomSrc("/images/sal/overview.png")}
-          />
+          <ImageZoom src="/images/sal.png" alt="SAL 개요/칸반 보드 UI" />
           <figcaption className="mt-2 text-sm text-zinc-400 text-center">
             SAL 보드 개요 (샘플 화면)
           </figcaption>
@@ -129,11 +124,9 @@ export default function SALContent() {
               제거하고 캐시 히트율을 개선했습니다.
             </p>
             <figure>
-              <img
+              <ImageZoom
                 src="/images/indexing.png"
                 alt="인덱스/실행계획 최적화"
-                className="rounded border border-zinc-700 cursor-pointer"
-                onClick={() => setZoomSrc("/images/sal/indexing.png")}
               />
               <figcaption className="mt-2 text-xs text-zinc-400 text-center">
                 조회 조건 분석 → 복합 인덱스 설계 → 실행 계획 개선
