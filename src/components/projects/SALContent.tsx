@@ -85,11 +85,9 @@ export default function SALContent() {
         </ul>
 
         <figure className="mt-4">
-          <img
+          <ImageZoom
             src="/images/sal-architecture.png"
             alt="SAL 배포/아키텍처 개요"
-            className="rounded-lg border border-zinc-700 cursor-pointer"
-            onClick={() => setZoomSrc("/images/sal/architecture.png")}
           />
           <figcaption className="mt-2 text-sm text-zinc-400 text-center">
             SAL 배포 파이프라인 개요
